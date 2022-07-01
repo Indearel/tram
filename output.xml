@@ -1,82 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.0 on win32)" generated="20220630 15:59:38.608" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.0 on win32)" generated="20220701 11:13:52.930" rpa="false" schemaversion="3">
 <suite id="s1" name="Tram" source="C:\Users\Sergiusz\PycharmProjects\tram\tram.robot">
 <test id="s1-t1" name="Opening and checking current weather on the webpage" line="24">
 <kw name="Prepare Env">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>1.2</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20220630 15:59:38.731" endtime="20220630 15:59:38.731"/>
+<status status="PASS" starttime="20220701 11:13:53.054" endtime="20220701 11:13:53.054"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>Screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20220630 15:59:38.731" endtime="20220630 15:59:38.731"/>
+<status status="PASS" starttime="20220701 11:13:53.054" endtime="20220701 11:13:53.054"/>
 </kw>
-<status status="PASS" starttime="20220630 15:59:38.731" endtime="20220630 15:59:38.731"/>
+<status status="PASS" starttime="20220701 11:13:53.053" endtime="20220701 11:13:53.054"/>
 </kw>
 <kw name="Start Test">
 <kw name="Log" library="BuiltIn">
 <arg>Test begins.</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20220630 15:59:38.732" level="INFO">Test begins.</msg>
-<status status="PASS" starttime="20220630 15:59:38.732" endtime="20220630 15:59:38.732"/>
+<msg timestamp="20220701 11:13:53.054" level="INFO">Test begins.</msg>
+<status status="PASS" starttime="20220701 11:13:53.054" endtime="20220701 11:13:53.054"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://www.wtp.waw.pl/rozklady-jazdy/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220630 15:59:38.732" level="INFO">Opening browser 'chrome' to base url 'https://www.wtp.waw.pl/rozklady-jazdy/'.</msg>
-<status status="PASS" starttime="20220630 15:59:38.732" endtime="20220630 15:59:41.897"/>
+<msg timestamp="20220701 11:13:53.055" level="INFO">Opening browser 'chrome' to base url 'https://www.wtp.waw.pl/rozklady-jazdy/'.</msg>
+<status status="PASS" starttime="20220701 11:13:53.054" endtime="20220701 11:13:56.142"/>
 </kw>
-<status status="PASS" starttime="20220630 15:59:38.732" endtime="20220630 15:59:41.897"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Twenty_Six}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220630 15:59:41.898" level="INFO">Clicking element 'css:#tram &gt; ul:nth-child(2) &gt; li:nth-child(1) &gt; ul:nth-child(1) &gt; li:nth-child(20) &gt; a:nth-child(1) &gt; span:nth-child(2)'.</msg>
-<status status="PASS" starttime="20220630 15:59:41.897" endtime="20220630 15:59:45.062"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Direction_Wiatraczna}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220630 15:59:45.063" level="INFO">Clicking element 'css:a.timetable-link:nth-child(2)'.</msg>
-<status status="PASS" starttime="20220630 15:59:45.063" endtime="20220630 15:59:48.024"/>
+<status status="PASS" starttime="20220701 11:13:53.054" endtime="20220701 11:13:56.142"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Cookie_Close}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220630 15:59:48.024" level="INFO">Clicking element 'css:#body &gt; div.page-consent &gt; button'.</msg>
-<msg timestamp="20220630 15:59:50.599" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/selenium-screenshot-7.png"&gt;&lt;img src="Screenshots/selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220630 15:59:50.599" level="FAIL">Element with locator 'css:#body &gt; div.page-consent &gt; button' not found.</msg>
-<status status="FAIL" starttime="20220630 15:59:48.024" endtime="20220630 15:59:50.600"/>
+<msg timestamp="20220701 11:13:56.142" level="INFO">Clicking element 'css:.page-consent-button'.</msg>
+<status status="PASS" starttime="20220701 11:13:56.142" endtime="20220701 11:13:58.593"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Twenty_Six}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220701 11:13:58.594" level="INFO">Clicking element 'css:#tram &gt; ul:nth-child(2) &gt; li:nth-child(1) &gt; ul:nth-child(1) &gt; li:nth-child(20) &gt; a:nth-child(1) &gt; span:nth-child(2)'.</msg>
+<status status="PASS" starttime="20220701 11:13:58.593" endtime="20220701 11:14:01.244"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Direction_Wiatraczna}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220701 11:14:01.244" level="INFO">Clicking element 'css:a.timetable-link:nth-child(2)'.</msg>
+<status status="PASS" starttime="20220701 11:14:01.244" endtime="20220701 11:14:04.554"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Station_Wola_Ratusz}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20220630 15:59:50.600" endtime="20220630 15:59:50.600"/>
+<msg timestamp="20220701 11:14:04.554" level="INFO">Clicking element 'css:.timetable-route-street:nth-child(10) .timetable-route-stop:nth-child(3) span'.</msg>
+<status status="PASS" starttime="20220701 11:14:04.554" endtime="20220701 11:14:07.162"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <arg>TranSchedulerobot.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" starttime="20220630 15:59:50.601" endtime="20220630 15:59:50.601"/>
+<msg timestamp="20220701 11:14:08.527" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/TranSchedulerobot.png"&gt;&lt;img src="Screenshots/TranSchedulerobot.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220701 11:14:07.162" endtime="20220701 11:14:08.527"/>
 </kw>
 <kw name="End Test">
-<status status="NOT RUN" starttime="20220630 15:59:50.601" endtime="20220630 15:59:50.601"/>
+<kw name="Log" library="BuiltIn">
+<arg>Test ends.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220701 11:14:08.528" level="INFO">Test ends.</msg>
+<status status="PASS" starttime="20220701 11:14:08.527" endtime="20220701 11:14:08.528"/>
 </kw>
-<status status="FAIL" starttime="20220630 15:59:38.730" endtime="20220630 15:59:50.601">Element with locator 'css:#body &gt; div.page-consent &gt; button' not found.</status>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220701 11:14:08.528" endtime="20220701 11:14:11.775"/>
+</kw>
+<status status="PASS" starttime="20220701 11:14:08.527" endtime="20220701 11:14:11.775"/>
+</kw>
+<status status="PASS" starttime="20220701 11:13:53.053" endtime="20220701 11:14:11.776"/>
 </test>
 <doc>A test suite for checking tram schedule.</doc>
-<status status="FAIL" starttime="20220630 15:59:38.609" endtime="20220630 15:59:50.602"/>
+<status status="PASS" starttime="20220701 11:13:52.932" endtime="20220701 11:14:11.776"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Tram">Tram</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tram">Tram</stat>
 </suite>
 </statistics>
 <errors>

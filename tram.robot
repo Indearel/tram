@@ -7,7 +7,7 @@ ${Twenty_Six}               css:#tram > ul:nth-child(2) > li:nth-child(1) > ul:n
 ${Direction_Wiatraczna}     css:a.timetable-link:nth-child(2)
 ${Station_Wola_Ratusz}      css:.timetable-route-street:nth-child(10) .timetable-route-stop:nth-child(3) span
 ${Number}                   css:.timetable-line-header-summary-details-line > div:nth-child(1) > strong:nth-child(1)
-${Cookie_Close}             css:.body > div.page-consent > button
+${Cookie_Close}             css:.page-consent-button
 
 *** Keywords ***
 Prepare Env
@@ -24,9 +24,9 @@ End Test
 Opening and checking current weather on the webpage
     Prepare Env
     Start Test
+    Click Element   ${Cookie_Close}
     Click Element   ${Twenty_Six}
     Click Element   ${Direction_Wiatraczna}
-    Click Element   ${Cookie_Close}
     Click Element   ${Station_Wola_Ratusz}
     Capture Page Screenshot  TranSchedulerobot.png
     End Test
