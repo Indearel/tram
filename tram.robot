@@ -8,6 +8,7 @@ ${Direction_Wiatraczna}     css:a.timetable-link:nth-child(2)
 ${Station_Wola_Ratusz}      css:.timetable-route-street:nth-child(10) .timetable-route-stop:nth-child(3) span
 ${Number}                   css:.timetable-line-header-summary-details-line > div:nth-child(1) > strong:nth-child(1)
 ${Cookie_Close}             css:.page-consent-button
+${Tram_now}                 css.timetable-minute low now-0
 
 *** Keywords ***
 Prepare Env
@@ -16,6 +17,8 @@ Prepare Env
 Start Test
     Log   Test begins.
     Open Browser    https://www.wtp.waw.pl/rozklady-jazdy/     chrome
+Tram Time
+    Log   The next tram will arrive at ${Tram_now}
 End Test
     Log     Test ends.
     Close browser
