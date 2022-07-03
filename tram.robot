@@ -12,7 +12,7 @@ ${Tram_now}                 css.timetable-minute low now-0
 
 *** Keywords ***
 Prepare Env
-    Set Selenium Speed    1.2
+    Set Selenium Speed    0.9
     Set Screenshot Directory        Screenshots
 Start Test
     Log   Test begins.
@@ -31,5 +31,6 @@ Opening and checking current weather on the webpage
     Click Element   ${Twenty_Six}
     Click Element   ${Direction_Wiatraczna}
     Click Element   ${Station_Wola_Ratusz}
+    Maximize Browser Window
     Capture Page Screenshot  TranSchedulerobot.png
     End Test
