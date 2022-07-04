@@ -3,6 +3,8 @@ Documentation     A test suite for checking tram schedule.
 Library           SeleniumLibrary
 
 *** Variables ***
+${chrome_browser}           chrome
+${Schedule_Site}            https://www.wtp.waw.pl/rozklady-jazdy/
 ${Twenty_Six}               css:#tram > ul:nth-child(2) > li:nth-child(1) > ul:nth-child(1) > li:nth-child(20) > a:nth-child(1) > span:nth-child(2)
 ${Direction_Wiatraczna}     css:a.timetable-link:nth-child(2)
 ${Station_Wola_Ratusz}      css:.timetable-route-street:nth-child(10) .timetable-route-stop:nth-child(3) span
@@ -16,9 +18,12 @@ Prepare Env
     Set Screenshot Directory        Screenshots
 Start Test
     Log   Test begins.
-    Open Browser    https://www.wtp.waw.pl/rozklady-jazdy/     chrome
+    Open Browser    ${Schedule_Site}      ${chrome_browser}
+Next Tram Time
+    ${Tram_now}   Get Value
+     [Return]      ${Tram_now}
 Tram Time
-    Log   The next tram will arrive at ${Tram_now}
+    Log   The next tram will arrive at
 End Test
     Log     Test ends.
     Close browser
@@ -33,4 +38,6 @@ Opening and checking current weather on the webpage
     Click Element   ${Station_Wola_Ratusz}
     Maximize Browser Window
     Capture Page Screenshot  Tram_Schedule_Robot.png
+    Log to console   Tram Time
+    Next Tram Time
     End Test
