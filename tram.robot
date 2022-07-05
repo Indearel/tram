@@ -3,6 +3,7 @@ Documentation     A test suite for checking tram schedule.
 Library           SeleniumLibrary
 
 *** Variables ***
+${firefox_browser}          firefox
 ${chrome_browser}           chrome
 ${Schedule_Site}            https://www.wtp.waw.pl/rozklady-jazdy/
 ${Twenty_Six}               css:#tram > ul:nth-child(2) > li:nth-child(1) > ul:nth-child(1) > li:nth-child(20) > a:nth-child(1) > span:nth-child(2)
