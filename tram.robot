@@ -22,8 +22,8 @@ Start Test
     Log   Test begins.
     Open Browser    ${Schedule_Site}      ${Chrome_Browser}
 Next Tram Time
-    ${Tram_now}   Get Value
-    [Return]      ${Tram_now}
+    ${Tram_now}     Get Value     css:#body > div.page-container.no-navbar.with-timetable > div.page-content > main > div > div.timetable-content > div > div.timetable-line-body > div.timetable-line-body-time > ul > li:nth-child(16) > ul > li:nth-child(2) > a
+    Click Element   ${Tram_now}
 Tram Time
     Log   The next tram will arrive at
 End Test
@@ -39,6 +39,6 @@ Opening and checking current weather on the webpage
     Click Element   ${Direction_Wiatraczna}
     Click Element   ${Station_Wola_Ratusz}
     Maximize Browser Window
-    Click Element   ${Tram_Now}
+    Next Tram Time
     Capture Page Screenshot  Tram_Schedule_Robot.png
     End Test
