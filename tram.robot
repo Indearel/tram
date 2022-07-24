@@ -11,7 +11,7 @@ ${Direction_Wiatraczna}     css:a.timetable-link:nth-child(2)
 ${Station_Wola_Ratusz}      css:.timetable-route-street:nth-child(10) .timetable-route-stop:nth-child(3) span
 ${Number}                   css:.timetable-line-header-summary-details-line > div:nth-child(1) > strong:nth-child(1)
 ${Cookie_Close}             css:.page-consent-button
-${Tram_Now}                 css:.now-0 > span:nth-child(1)
+${Tram_Now}                 css:.now-0
 ${Timetable_Now}            css:.timetable-route-point time
 
 *** Keywords ***
@@ -39,6 +39,6 @@ Opening and checking current weather on the webpage
     Click Element   ${Direction_Wiatraczna}
     Click Element   ${Station_Wola_Ratusz}
     Maximize Browser Window
-    Next Tram Time
+    Scroll Element Into View   ${Tram_Now}
     Capture Page Screenshot  Tram_Schedule_Robot.png
     End Test
